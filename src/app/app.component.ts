@@ -14,19 +14,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   
-nome:string = "isaque";
-contador:number = 0;
-
-aumentar(){
-  this.contador++;
-}
-
-diminuir(){
-  this.contador--;
-}
-
-
-
 
 }
