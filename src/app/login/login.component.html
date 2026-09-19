@@ -1,1 +1,73 @@
-<p>login works!</p>
+<body>
+
+    <div class=card>
+
+        <div class="card-body">
+
+            <div class="text">
+
+                <h1>
+                    Login de Cliente
+                </h1>
+
+                <p>
+                    Coloque seus dados para entrar na Brava Perfumaria.
+                </p>
+
+            </div>
+
+            <form onsubmit="logar(event)" class="space-y-4">
+
+
+
+                <label class="form-control">
+
+                    <span class="label-text">E-mail</span>
+
+                    <input id="email" type="email" class="input " placeholder="exemplo@email.com" required>
+
+                </label>
+
+                <label class="form-control">
+
+                    <span class="label-text ">Senha</span>
+
+                    <input id="senha" type="password" class="input " placeholder="••••••••" required>
+
+                </label>
+
+
+                <div class="flex ">
+
+                    <a routerLink="/home" class="btn ">
+                        Cancelar
+                    </a>
+
+                    <button type="submit" class="btn">
+                        logar
+                    </button>
+
+
+                </div>
+
+                <div>
+
+                    <a class="link" routerLink="/cadastro">Não tenho cadastro</a>
+                    <br>
+
+                    <a onclick="recuperarSenha(); return false;" class="link ">
+                        Esqueci minha senha
+                    </a>
+                </div>
+
+
+                <p id="mensagem"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+</body>

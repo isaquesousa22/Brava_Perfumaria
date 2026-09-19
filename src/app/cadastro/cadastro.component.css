@@ -10,7 +10,7 @@ body{
 .card{
    width: 100%;
     max-width: 500px;
-    background-color: #000;
+    background-color: #2b2b2b;
     border-radius: 12px;
     padding: 24px;
     box-sizing: border-box;
@@ -22,8 +22,9 @@ body{
 }
 
 .text h1{
-    font-size: large;
+    font-size: 30px;
     font-weight: bold;
+    color: rgb(255, 255, 255);
 }
 
 .text p {
@@ -42,12 +43,16 @@ form {
 .form-control {
     display: flex;
     flex-direction: column;
+    background-color: rgb(46, 45, 45) ;
+    border-radius: 10px;
+    border-color: #000;
 }
 
 
 .label-text {
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 18px;
+    color: #B5832C;
 }
 
 
@@ -55,16 +60,16 @@ form {
     width: 100%;
     box-sizing: border-box;
     padding: 10px 12px;
-    border: 1px solid #555;
+    border: 1px solid #0c0c0c;
     border-radius: 8px;
     background-color: #1f1f1f;
-    color: rgb(102, 79, 4);
+    color: rgb(231, 230, 226);
     outline: none;
 }
 
 
 .input:focus {
-    border-color: #5700ff;
+    border-color: #B5832C;
 }
 
 
@@ -119,31 +124,18 @@ form {
     text-align: center;
     text-decoration: none;
     transition: 0.2s;
+    background-color: #695c0e;
+    color: white;
+    margin-right: 5px;
+}
+
+.btn:hover {
+    background-color: #c7b447;
 }
 
 
 .flex-1 {
     flex: 1;
-}
-
-
-.btn {
-    background-color: #333;
-    color: white;
-}
-
-.btn:hover {
-    background-color: #444;
-}
-
-
-.btn {
-    background-color: #5700ff;
-    color: white;
-}
-
-.btn:hover {
-    background-color: #4500cc;
 }
 
 

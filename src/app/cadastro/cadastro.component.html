@@ -1,16 +1,16 @@
 <body>
 
-    <div class= card>
+    <div class=card>
 
         <div class="card-body">
 
             <div class="text">
 
-                <h1 >
-                    Cadastro de Parceiro
+                <h1>
+                    Cadastro de Cliente
                 </h1>
 
-                <p >
+                <p>
                     Preencha seus dados para fazer parte da Lumar Corretora.
                 </p>
 
@@ -22,8 +22,8 @@
 
                     <span class="label-text mb-2">Nome</span>
 
-                    <input id="nome" type="text" class="input input-bordered w-full"
-                        placeholder="Digite o nome da empresa" required>
+                    <input id="nome" type="text" class="input input-bordered w-full" placeholder="Digite o seu nome "
+                        required>
 
                 </label>
 
@@ -31,35 +31,31 @@
 
                     <span class="label-text ">Telefone</span>
 
-                    <input id="telefone" type="tel"  placeholder="(11) 99999-9999"
-                        required>
+                    <input id="telefone" type="tel" class="input" placeholder="(11) 99999-9999" required>
 
                 </label>
 
                 <label class="form-control">
 
-                    <span class="label-text mb-2">Endereço</span>
+                    <span class="label-text">Endereço</span>
 
-                    <input id="endereco" type="text" class="input "
-                        placeholder="Rua, número e bairro" required>
-
-                </label>
-
-                <label class="form-control">
-
-                    <span class="label-text mb-2">E-mail</span>
-
-                    <input id="email" type="email" class="input " placeholder="exemplo@email.com"
-                        required>
+                    <input id="endereco" type="text" class="input " placeholder="Rua, número e bairro" required>
 
                 </label>
 
                 <label class="form-control">
 
-                    <span class="label-text mb-2">Senha</span>
+                    <span class="label-text">E-mail</span>
 
-                    <input id="senha" type="password" class="input " placeholder="••••••••"
-                        required>
+                    <input id="email" type="email" class="input " placeholder="exemplo@email.com" required>
+
+                </label>
+
+                <label class="form-control">
+
+                    <span class="label-text ">Senha</span>
+
+                    <input id="senha" type="password" class="input " placeholder="••••••••" required>
 
                 </label>
 
@@ -67,8 +63,7 @@
 
                     <span class="label-text ">CPF ou CNPJ</span>
 
-                    <input id="cpfCnpj" type="text" class="input "
-                        placeholder="Digite seu CPF ou CNPJ" required>
+                    <input id="cpfCnpj" type="text" class="input " placeholder="Digite seu CPF ou CNPJ" required>
 
                 </label>
 
@@ -76,20 +71,19 @@
 
                     <span class="label-text ">Descrição</span>
 
-                    <textarea id="descricao" class="textarea "
-                        placeholder="Descreva sua empresa"></textarea>
+                    <textarea id="descricao" class="textarea " placeholder="Descreva sua empresa"></textarea>
 
                 </label>
 
                 <div class="flex ">
 
+                    <a routerLink="/login" class="btn"> Tenho Cadastro </a>
+
                     <a routerLink="/home" class="btn ">
                         Cancelar
                     </a>
 
-                    <button routerLink="/login" type="submit" class="btn">
-                        Criar Conta
-                    </button>
+                    
 
                 </div>
 
