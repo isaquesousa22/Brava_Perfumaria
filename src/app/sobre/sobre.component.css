@@ -1,0 +1,67 @@
+.sobre {
+    background-color: #000000;
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+.sobre-conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sobre h1 {
+    color: #c7b447;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.sobre h2 {
+    color: #c7b447;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 30%;
+    min-height: 250px;
+    background-color: #111111;
+    border: 1px solid #c7b447;
+    border-radius: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0 0 30px rgba(199, 180, 71, 0.3);
+}
+
+.card h2 {
+    color: #c7b447;
+    margin-top: 0;
+    font-size: 25px;
+}
+
+.card p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
