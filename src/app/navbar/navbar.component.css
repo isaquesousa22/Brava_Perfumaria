@@ -19,7 +19,8 @@ nav a {
 }
 
 nav a:hover {
-  color: #bfdbfe;
+  color: #c7b447;
+  
 }
 
 nav a::after {
@@ -29,8 +30,9 @@ nav a::after {
   bottom: -5px;
   width: 0;
   height: 2px;
-  background: white;
+  background: rgb(100, 94, 94);
   transition: width 0.3s;
+ 
 }
 
 nav a:hover::after {
