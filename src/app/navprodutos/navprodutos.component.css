@@ -1,0 +1,38 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c7b447;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: rgb(100, 94, 94);
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
