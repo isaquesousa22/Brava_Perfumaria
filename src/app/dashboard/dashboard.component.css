@@ -1,0 +1,104 @@
+
+
+h2{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+p{
+    font-size: 20px ;
+    text-align: center;
+}
+
+.banners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner {
+    width: 1000px;
+    height: 400px;
+    margin-top: 2cm;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#banner .carousel-item {
+    height: 400px;
+}
+
+#banner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#banner:hover {
+    transform: scale(1.02);
+    transition: 0.5s;
+}
+
+.produtos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    grid-row: 4;
+}
+
+.produto{
+    width: 300px;
+    height: 480px;
+    background-color: #928282;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.produto:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.img{
+    width: 100%;
+    height: 260px;
+    border-radius: 20px;
+    background-color: #a71d1d;
+}
+
+.img img{
+    width: 100%;
+    height: 260px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.descricao{
+    text-align: left;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.titleProduto{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background-color: #a71d1d;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+    font-size: 15px;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
