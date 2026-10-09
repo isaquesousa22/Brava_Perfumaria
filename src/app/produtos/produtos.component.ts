@@ -4,7 +4,7 @@ import { NavprodutosComponent } from '../navprodutos/navprodutos.component';
 
 @Component({
   selector: 'app-produtos',
-  imports: [HeaderprodutosComponent, NavprodutosComponent  ],
+  imports: [HeaderprodutosComponent, NavprodutosComponent],
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.css'
 })

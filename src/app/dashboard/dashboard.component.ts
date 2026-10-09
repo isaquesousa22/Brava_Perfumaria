@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 import { NavdasboardComponent } from '../navdasboard/navdasboard.component';
 import { HeaderdashboardComponent } from '../headerdashboard/headerdashboard.component';
+import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,5 +12,18 @@ import { HeaderdashboardComponent } from '../headerdashboard/headerdashboard.com
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+
+     constructor(public carrinho: CarrinhoService) {}
+
+    adicionarAoCarrinho(): void {
+    this.carrinho.adicionarProduto({
+      id: 1,
+      nome: 'Perfume Brava',
+      preco: 150,
+      imagem: 'assets/perfume.png'
+    });
+
+    alert('Produto adicionado ao carrinho!');
+  }
 
 }

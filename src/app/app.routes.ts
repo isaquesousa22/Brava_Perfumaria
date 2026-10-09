@@ -7,6 +7,8 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TodosprodutosComponent } from './todosprodutos/todosprodutos.component';
+import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
 
 
 export const routes: Routes = [
@@ -56,5 +58,17 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+
+  {
+    path: 'todosprodutos',
+    component: TodosprodutosComponent
+  },
+
+  {
+    path: 'carrinho',
+    component: CarrinhoComponent
   }
+
+
 ];

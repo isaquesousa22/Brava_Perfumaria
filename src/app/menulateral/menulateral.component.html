@@ -1,0 +1,53 @@
+<button class="botao-menu" (click)="alternarMenu()" aria-label="Abrir menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+
+@if (menuAberto) {
+<div class="fundo-menu" (click)="fecharMenu()"></div>
+}
+
+
+<aside class="menu-lateral" [class.aberto]="menuAberto">
+
+    <div class="menu-cabecalho">
+        <h2>BRAVA</h2>
+
+        <button class="botao-fechar" (click)="fecharMenu()" aria-label="Fechar menu">
+            &times;
+        </button>
+    </div>
+
+    <nav class="opcoes-menu">
+
+        <a href="/perfil" class="btn" (click)="fecharMenu()">
+            <span>♙</span>
+            Meu perfil
+        </a>
+
+        <a routerLink="/carrinho" class="btn" (click)="fecharMenu()">
+            <span>🛒</span>
+            Meu carrinho
+
+
+
+            <span class="quantidade-carrinho">
+                {{ carrinho.contarItens() }}
+            </span>
+        </a>
+
+        <a routerLink="/pedidos" class="btn" (click)="fecharMenu()">
+            <span>📦</span>
+            Meus pedidos
+        </a>
+
+        <a routerLink="/dashboard" class="btn" (click)="fecharMenu()">
+            <span>⌂</span>
+            Início
+        </a>
+
+    </nav>
+
+</aside>

@@ -1,0 +1,128 @@
+
+<main class="pagina-carrinho">
+
+  <header class="titulo-pagina">
+    <span class="subtitulo">BRAVA PERFUMARIA</span>
+    <h1>Meu carrinho</h1>
+    <p>Seus perfumes favoritos estão aqui.</p>
+  </header>
+
+
+
+  @if (carrinho.produtos.length > 0) {
+
+    <div class="conteudo-carrinho">
+
+      <section class="lista-produtos">
+
+        @for (produto of carrinho.produtos; track produto.id) {
+          <article class="produto">
+
+            <div class="imagem-produto">
+              @if (produto.imagem) {
+                <img [src]="produto.imagem" [alt]="produto.nome">
+              } @else {
+                <span>BRAVA</span>
+              }
+            </div>
+
+            <div class="informacoes-produto">
+              <h2>{{ produto.nome }}</h2>
+
+              <p class="preco">
+                {{ produto.preco | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+              </p>
+
+              <div class="controles">
+
+                <button
+                  type="button"
+                  (click)="diminuir(produto.id)"
+                  [attr.aria-label]="'Diminuir quantidade de ' + produto.nome"
+                >−</button>
+
+                <span>{{ produto.quantidade }}</span>
+
+                <button
+                  type="button"
+                  (click)="aumentar(produto.id)"
+                  [attr.aria-label]="'Aumentar quantidade de ' + produto.nome"
+                >+</button>
+
+              </div>
+
+              <button
+                type="button"
+                class="remover"
+                (click)="remover(produto.id)"
+              >
+                Remover
+              </button>
+            </div>
+
+            <strong class="subtotal-produto">
+              {{ (produto.preco * produto.quantidade) | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+            </strong>
+
+          </article>
+        }
+
+      </section>
+
+      <aside class="resumo">
+
+        <h2>Resumo do pedido</h2>
+
+        <div class="linha-resumo">
+          <span>Itens</span>
+          <span>{{ carrinho.contarItens() }}</span>
+        </div>
+
+        <div class="linha-resumo">
+          <span>Subtotal</span>
+          <span>
+            {{ carrinho.calcularTotal() | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+          </span>
+        </div>
+
+        <div class="linha-resumo total">
+          <strong>Total</strong>
+          <strong>
+            {{ carrinho.calcularTotal() | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+          </strong>
+        </div>
+
+        <button
+          type="button"
+          class="finalizar"
+          (click)="finalizarCompra()"
+          disabled
+        >
+          Finalização em breve
+        </button>
+
+        <a routerLink="/dashboard" class="continuar">
+          Continuar comprando
+        </a>
+
+      </aside>
+
+    </div>
+
+  } @else {
+
+    <section class="carrinho-vazio">
+      <div class="icone-carrinho">🛒</div>
+
+      <h2>Seu carrinho está vazio</h2>
+
+      <p>Explore nossa coleção e encontre seu próximo perfume favorito.</p>
+
+      <a routerLink="/dashboard" class="botao-loja">
+        Explorar perfumes
+      </a>
+    </section>
+
+  }
+
+</main>
