@@ -19,7 +19,7 @@ export class TodosprodutosComponent {
   adicionarAoCarrinho(): void {
     this.carrinho.adicionarProduto({
       id: 1,
-      nome: 'Perfume Brava',
+      nome: 'Pacco rabane million',
       preco: 150,
       imagem: 'assets/perfume.png'
     });
