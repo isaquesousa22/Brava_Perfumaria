@@ -1,0 +1,108 @@
+
+<body class="bg-base-200">
+
+    <div class="navbar">
+
+        <div class="flex-1">
+            <a class="btn">
+                Painel Administrativo
+            </a>
+        </div>
+
+        <div class="flex-none">
+
+            <button class="btn btn-error" onclick="location.href='/src/index.html'">
+                Sair
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto p-8">
+
+        <h1 class="text-4xl font-bold mb-8">
+
+            Bem-vindo Administrador
+
+        </h1>
+
+        <div class="grid md:grid-cols-4 gap-6 mb-8">
+
+            <div class="stat bg-base-100 rounded-box shadow">
+
+                <div class="stat-title">
+                    Pendentes
+                </div>
+
+                <div class="stat-value text-warning" id="pendentes">
+                    0
+                </div>
+
+            </div>
+
+            <div class="stat bg-base-100 rounded-box shadow">
+
+                <div class="stat-title">
+                    Aprovados
+                </div>
+
+                <div class="stat-value text-success" id="aprovados">
+                    0
+                </div>
+
+            </div>
+
+            <div class="stat bg-base-100 rounded-box shadow">
+
+                <div class="stat-title">
+                    Rejeitados
+                </div>
+
+                <div class="stat-value text-error" id="rejeitados">
+                    0
+                </div>
+
+            </div>
+
+            <div class="stat bg-base-100 rounded-box shadow">
+
+                <div class="stat-title">
+                    Total
+                </div>
+
+                <div class="stat-value text-info" id="total">
+                    0
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="flex gap-2 mb-8">
+
+          
+
+            <a routerLink="#" class="btn btn-secondary">
+                Todos os clientes
+            </a>
+
+        </div>
+
+        <div class=" flex gap-2 mb-8">
+             <a href="suporte.html" class="btn btn-secondary">
+                Portal de suporte
+            </a>
+
+            <a href="perfil.html" class="btn btn-secondary">
+                Meu perfil
+            </a>
+        </div>
+
+    </div>
+    
+
+    
+
+</body>
+

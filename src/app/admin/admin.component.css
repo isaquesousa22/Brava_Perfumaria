@@ -1,0 +1,14 @@
+.navbar{
+    background-color: black;
+    color: #B5832C;;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 6px;
+    
+}
