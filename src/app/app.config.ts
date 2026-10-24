@@ -4,9 +4,11 @@ import { routes } from './app.routes';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { provideHttpClient } from '@angular/common/http';
+
 
 registerLocaleData(localePt, 'pt-BR');
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), { provide: LOCALE_ID, useValue: 'pt-BR' }]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), { provide: LOCALE_ID, useValue: 'pt-BR' }, provideHttpClient()]
 };

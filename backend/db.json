@@ -1,0 +1,26 @@
+{
+    "clientes": [
+        {
+            "id": "ABC1",
+            "cpf": "3247857675",
+            "nome": "Ana",
+            "sobrenome":"Silva",
+            "dtNascimento":"2005-10-01",
+            "email":"ana@email.com"
+            
+
+        }
+    ],
+
+    "admin":[
+        {
+            "id": "ABC2",
+            "cpf": "8744556754",
+            "nome": "Isaque",   
+            "sobrenome":"Sousa",
+            "dtNascimento":"2008-10-05",
+            "email":"isaque@email.com"
+            
+        }
+    ]
+}

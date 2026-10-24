@@ -1,9 +1,9 @@
 export interface Cliente{
-    id?: number,
-    cpf: String,
-    nome: String,
-    dataNascimento: String,
-    email:String,
-    endereco: String,
-    senha?:String
+    id?: string,
+    cpf: string,
+    nome: string,
+    dataNascimento: string,
+    email: string,
+    endereco?: string,
+    senha?:string
 }

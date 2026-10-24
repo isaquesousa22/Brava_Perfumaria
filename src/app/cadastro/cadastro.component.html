@@ -1,5 +1,5 @@
 <app-header>
-    
+
 </app-header>
 
 <body>
@@ -20,7 +20,7 @@
 
             </div>
 
-            <form onsubmit="registrar(); return false;" class="space-y-4">
+            <form class="space-y-4">
 
                 <label class="form-control">
 
@@ -55,13 +55,7 @@
 
                 </label>
 
-                <label class="form-control">
 
-                    <span class="label-text ">Senha</span>
-
-                    <input id="senha" type="password" class="input " placeholder="••••••••" required>
-
-                </label>
 
                 <label class="form-control">
 
@@ -71,10 +65,27 @@
 
                 </label>
 
+                <label class="form-control">
+
+                    <span class="label-text ">Senha</span>
+
+                    <input id="senha" type="password" class="input " placeholder="••••••••" required>
+
+                </label>
+
+
+                <label class="form-control">
+
+                    <span class="label-text ">Confirma senha</span>
+
+                    <input id="senha" type="password" class="input " placeholder="••••••••" required>
+
+                </label>
+
 
                 <div class="flex ">
 
-                    <a id="btnCadastrar" class="btn" routerLink="/dashboard"> Cadastrar </a>
+                    <a id="btnCadastrar" class="btn" routerLink="/dashboard" (click)="salvar" ()> Cadastrar </a>
 
                     <a routerLink="/login" class="btn"> Tenho Cadastro </a>
 
@@ -82,7 +93,7 @@
                         Cancelar
                     </a>
 
-                    
+
 
                 </div>
 
