@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { Cliente } from '../model/cliente';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import id from '@angular/common/locales/id';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +22,8 @@ export class ClienteService {
     return this.clienteHTTP.post<Cliente>(this.API, cliente)
   }
 
-    excluir(cliente:Cliente): Observable<void>{
-    return this.clienteHTTP.delete<void>(`${this.API}/${id}`)
-  }
+  excluir(cliente: Cliente): Observable<void> {
+  return this.clienteHTTP.delete<void>(`${this.API}/${cliente.id}`);
+}
 
 }

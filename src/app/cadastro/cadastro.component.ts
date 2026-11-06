@@ -3,10 +3,11 @@ import { Router, RouterLink } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { Cliente } from '../model/cliente';
 import { ClienteService } from '../services/cliente.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
-  imports: [RouterLink, HeaderComponent],
+  imports: [RouterLink, HeaderComponent, FormsModule],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })

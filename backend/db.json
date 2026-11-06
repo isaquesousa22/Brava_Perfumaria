@@ -22,5 +22,15 @@
             "email":"isaque@email.com"
             
         }
+    ],
+
+    "produtos":[
+        {
+            "id": "ABC3",
+            "nome": "perfume",
+            "descricao":"perfume floral",
+            "preco": 50.00,
+            "quantidade": 100
+        }
     ]
 }

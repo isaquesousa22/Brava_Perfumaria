@@ -26,8 +26,12 @@
 
                     <span class="label-text mb-2">Nome</span>
 
-                    <input id="nome" type="text" class="input input-bordered w-full" placeholder="Digite o seu nome "
-                        required>
+                    <input id="nome" 
+                    type="text" 
+                    class="input input-bordered w-full" 
+                    placeholder="Digite o seu nome "
+                    [(ngModel)]="cliente.nome" 
+                    name="nome" required>
 
                 </label>
 
@@ -35,7 +39,12 @@
 
                     <span class="label-text ">Telefone</span>
 
-                    <input id="telefone" type="tel" class="input" placeholder="(11) 99999-9999" required>
+                    <input id="telefone" 
+                    type="tel" 
+                    class="input" 
+                    placeholder="(11) 99999-9999"
+                    [(ngModel)]="cliente.telefone" 
+                    name="telefone" required>
 
                 </label>
 
@@ -43,7 +52,12 @@
 
                     <span class="label-text">Endereço</span>
 
-                    <input id="endereco" type="text" class="input " placeholder="Rua, número e bairro" required>
+                    <input id="endereco" 
+                    type="text" 
+                    class="input " 
+                    placeholder="Rua, número e bairro"
+                    [(ngModel)]="cliente.endereco" 
+                    name="endereco" required>
 
                 </label>
 
@@ -51,7 +65,12 @@
 
                     <span class="label-text">E-mail</span>
 
-                    <input id="email" type="email" class="input " placeholder="exemplo@email.com" required>
+                    <input id="email" 
+                    type="email" 
+                    class="input " 
+                    placeholder="exemplo@email.com"
+                    [(ngModel)]="cliente.email" 
+                    name="email" required>
 
                 </label>
 
@@ -61,7 +80,12 @@
 
                     <span class="label-text ">CPF</span>
 
-                    <input id="cpfCnpj" type="text" class="input " placeholder="Digite seu CPF ou CNPJ" required>
+                    <input id="cpfCnpj"
+                     type="text"
+                    class="input "
+                    placeholder="Digite seu CPF ou CNPJ"
+                    [(ngModel)]="cliente.cpfCnpj"
+                    name="cpfCnpj" required>
 
                 </label>
 
@@ -69,7 +93,12 @@
 
                     <span class="label-text ">Senha</span>
 
-                    <input id="senha" type="password" class="input " placeholder="••••••••" required>
+                    <input 
+                    id="senha" type="password"
+                     class="input " 
+                     placeholder="••••••••" 
+                     [(ngModel)]="cliente.senha"
+                     name="senha" required>
 
                 </label>
 
@@ -78,14 +107,18 @@
 
                     <span class="label-text ">Confirma senha</span>
 
-                    <input id="senha" type="password" class="input " placeholder="••••••••" required>
+                    <input id="confirmarSenha" 
+                    type="password" 
+                    class="input " placeholder="••••••••"
+                    [(ngModel)]="confirmarSenha" 
+                    name="confirmarSenha" required>
 
                 </label>
 
 
                 <div class="flex ">
 
-                    <a id="btnCadastrar" class="btn" routerLink="/dashboard" (click)="salvar" ()> Cadastrar </a>
+                    <a id="btnCadastrar" class="btn" (click)="salvar()"> Cadastrar </a>
 
                     <a routerLink="/login" class="btn"> Tenho Cadastro </a>
 
