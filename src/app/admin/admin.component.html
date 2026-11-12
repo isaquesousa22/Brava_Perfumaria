@@ -11,7 +11,7 @@
 
         <div class="flex-none">
 
-            <button class="btn btn-error" onclick="location.href='/src/index.html'">
+            <button class="btn btn-error" routerLink="/home">
                 Sair
             </button>
 
@@ -32,11 +32,11 @@
             <div class="stat bg-base-100 rounded-box shadow">
 
                 <div class="stat-title">
-                    Pendentes
+                    <p>Pendentes</p>
                 </div>
 
                 <div class="stat-value text-warning" id="pendentes">
-                    0
+                  0
                 </div>
 
             </div>
@@ -44,7 +44,7 @@
             <div class="stat bg-base-100 rounded-box shadow">
 
                 <div class="stat-title">
-                    Aprovados
+                   <p>Aprovados</p> 
                 </div>
 
                 <div class="stat-value text-success" id="aprovados">
@@ -56,11 +56,11 @@
             <div class="stat bg-base-100 rounded-box shadow">
 
                 <div class="stat-title">
-                    Rejeitados
+                   <p> Rejeitados</p>
                 </div>
 
                 <div class="stat-value text-error" id="rejeitados">
-                    0
+                  0
                 </div>
 
             </div>
@@ -68,7 +68,7 @@
             <div class="stat bg-base-100 rounded-box shadow">
 
                 <div class="stat-title">
-                    Total
+                  <p>Total</p>  
                 </div>
 
                 <div class="stat-value text-info" id="total">
@@ -81,21 +81,28 @@
 
         <div class="flex gap-2 mb-8">
 
-          
 
-            <a routerLink="#" class="btn btn-secondary">
+            <a routerLink="/admincliente" class="btn btn-secondary">
                 Todos os clientes
+            </a>
+
+            <a routerLink="/adminAdmin" class="btn btn-secondary">
+                Todos os admintradores
             </a>
 
         </div>
 
         <div class=" flex gap-2 mb-8">
-             <a href="suporte.html" class="btn btn-secondary">
+             <a routerLink="#" class="btn btn-secondary">
                 Portal de suporte
             </a>
 
-            <a href="perfil.html" class="btn btn-secondary">
+            <a routerLink="#" class="btn btn-secondary">
                 Meu perfil
+            </a>
+
+            <a routerLink= "CadastrarProdutos" class=" btn-secondary">
+                Cadastrar Produtos
             </a>
         </div>
 

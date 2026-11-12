@@ -1,8 +1,23 @@
 .navbar{
     background-color: black;
-    color: #B5832C;;
+    color: #B5832C;
 }
 
+h1{
+    color: #B5832C;
+}
+
+p{
+    color: #B5832C;
+}
+
+a{
+    color: #B5832C;
+}
+
+div{
+    color: #B5832C;
+}
 .btn{
     background-color: transparent;
     border: none;

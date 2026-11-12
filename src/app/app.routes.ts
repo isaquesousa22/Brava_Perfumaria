@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TodosprodutosComponent } from './todosprodutos/todosprodutos.component';
 import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
 import { AdminclienteComponent } from './admincliente/admincliente.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 export const routes: Routes = [
@@ -69,6 +70,12 @@ export const routes: Routes = [
   {
     path: 'carrinho',
     component: CarrinhoComponent
+  },
+
+  {
+
+    path: 'admin',
+    component:AdminComponent
   },
 
   {
