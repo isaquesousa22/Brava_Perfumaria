@@ -22,8 +22,8 @@ export class ClienteService {
     return this.clienteHTTP.post<Cliente>(this.API, cliente)
   }
 
-  excluir(cliente: Cliente): Observable<void> {
-  return this.clienteHTTP.delete<void>(`${this.API}/${cliente.id}`);
+  excluir(id: string): Observable<void> {
+  return this.clienteHTTP.delete<void>(`${this.API}/${id}`);
 }
 
 }

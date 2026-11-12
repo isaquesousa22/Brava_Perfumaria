@@ -32,6 +32,7 @@ export class CadastroComponent {
     this.service.incluir(this.cliente).subscribe({
       next: (cliente) => {
         console.log('Cadastrado com sucesso:', cliente);
+        this.router.navigate(['/dashboard']);
       },
       error: (erro) => {
         console.error('Erro ao cadastrar:', erro);

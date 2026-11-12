@@ -1,36 +1,40 @@
 {
-    "clientes": [
-        {
-            "id": "ABC1",
-            "cpf": "3247857675",
-            "nome": "Ana",
-            "sobrenome":"Silva",
-            "dtNascimento":"2005-10-01",
-            "email":"ana@email.com"
-            
-
-        }
-    ],
-
-    "admin":[
-        {
-            "id": "ABC2",
-            "cpf": "8744556754",
-            "nome": "Isaque",   
-            "sobrenome":"Sousa",
-            "dtNascimento":"2008-10-05",
-            "email":"isaque@email.com"
-            
-        }
-    ],
-
-    "produtos":[
-        {
-            "id": "ABC3",
-            "nome": "perfume",
-            "descricao":"perfume floral",
-            "preco": 50.00,
-            "quantidade": 100
-        }
-    ]
+  "clientes": [
+    {
+      "id": "ABC1",
+      "cpf": "3247857675",
+      "nome": "Ana",
+      "sobrenome": "Silva",
+      "dtNascimento": "2005-10-01",
+      "email": "ana@email.com"
+    },
+    {
+      "nome": "isaac",
+      "telefone": "16844563",
+      "endereco": "sesc",
+      "email": "isaac@gmail.com",
+      "cpfCnpj": "56544325",
+      "senha": "123456",
+      "id": "i70Ro-TgSJ8"
+    }
+  ],
+  "admin": [
+    {
+      "id": "ABC2",
+      "cpf": "8744556754",
+      "nome": "Isaque",
+      "email": "isaque@email.com",
+      "senha": "admin"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "ABC3",
+      "nome": "perfume",
+      "descricao": "perfume floral",
+      "preco": 50,
+      "quantidade": 100
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

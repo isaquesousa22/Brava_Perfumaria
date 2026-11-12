@@ -19,7 +19,7 @@
 
             </div>
 
-            <form onsubmit="logar(event)" class="space-y-4">
+            <form class="space-y-4">
 
 
 
@@ -27,7 +27,13 @@
 
                     <span class="label-text">E-mail</span>
 
-                    <input id="email" type="email" class="input " placeholder="exemplo@email.com" required>
+                    <input id="email" 
+                    type="email"
+                     class="input " 
+                     placeholder="exemplo@email.com" 
+                    [(ngModel)]="email"
+                     name = "email"
+                     required>
 
                 </label>
 
@@ -35,14 +41,20 @@
 
                     <span class="label-text ">Senha</span>
 
-                    <input id="senha" type="password" class="input " placeholder="••••••••" required>
+                    <input id="senha" 
+                    type="password" 
+                    class="input " 
+                    placeholder="••••••••" 
+                    [(ngModel)]="senha"
+                    name="senha"
+                    required>
 
                 </label>
 
 
                 <div class="flex ">
 
-                    <a class="btn"  routerLink="/dashboard">Logar</a>
+                    <a class="btn"  (click)="logar()">Logar</a>
 
                     <a routerLink="/home" class="btn ">
                         Cancelar
@@ -58,7 +70,7 @@
 
                     
 
-                    <a class="link" routerLink="/cadastro">Não tenho cadastro</a>
+                    <a class="link"  routerLink="/cadastro">Não tenho cadastro</a>
                     <br>
 
                     <a onclick="recuperarSenha(); return false;" class="link ">

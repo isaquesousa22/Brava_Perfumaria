@@ -20,7 +20,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
-                    <th>Data de Nascimento</th>
                     <th>email</th>
                     <th>endereco</th>
                     <th>cpf</th>
@@ -32,10 +31,9 @@
                 <tr>
                     <td>{{ cliente.id }}</td>
                     <td>{{ cliente.nome }}</td>
-                    <td>{{ cliente.dataNascimento }}</td>
                     <td>{{ cliente.email }}</td>
                     <td>{{ cliente.endereco }}</td>
-                    <td>{{ cliente.cpf }}</td>
+                    <td>{{ cliente.cpfCnpj }}</td>
                     <td class="acoes">
                         <button class="botao-editar" type="button" (click)="editar(cliente.id!)">
                             Editar
