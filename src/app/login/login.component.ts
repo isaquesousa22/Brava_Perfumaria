@@ -1,8 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
-import { Cliente } from '../model/cliente';
-import { Admin } from '../model/admin';
 import { AdminService } from '../services/admin.service';
 import { ClienteService } from '../services/cliente.service';
 import { FormsModule } from '@angular/forms';

@@ -1,1 +1,125 @@
-<p>cadastro-produtos works!</p>
+
+
+<body>
+
+    <div class="cabecalho">
+        <div>
+            <h1 class="subtitulo">
+                ÁREA ADMINISTRATIVA
+            </h1>
+
+
+            <h1> CADASTRAR Produtos</h1>
+            <p>
+                Gerencie os produtos.
+            </p>
+
+            <a routerLink= "/admin" class=" btn btn-secondary">
+                voltar
+         </a>
+        </div>
+     
+   
+       
+    </div>
+
+    <div class=card>
+
+        <div class="card-body">
+
+            <div class="text">
+
+                <h1>
+                    Cadastro de Produtos
+                </h1>
+
+                <p>
+                    Preencha os dados do produto .
+                </p>
+
+            </div>
+
+            <form class="space-y-4">
+
+                <label class="form-control">
+
+                    <span class="label-text mb-2">Nome</span>
+
+                    <input id="nome" 
+                    type="text" 
+                    class="input input-bordered w-full" 
+                    placeholder="Digite o nome do produto "
+                    [(ngModel)]="produto.nome" 
+                    name="nome" required>
+
+                </label>
+
+               
+             
+
+                <label class="form-control">
+
+                    <span class="label-text ">preco</span>
+
+                    <input 
+                    id="preco" type="text"
+                     class="input " 
+                     placeholder="$150,00" 
+                     [(ngModel)]="produto.preco"
+                     name="senha" required>
+
+                </label>
+
+                   <label class="form-control">
+
+                    <span class="label-text">quantidade</span>
+
+                    <input id="quantidade" 
+                    type="text" 
+                    class="input " 
+                    placeholder="2"
+                    [(ngModel)]="produto.quantidade" 
+                    name="email" required>
+
+                </label>
+
+                <label class="form-control">
+
+                    <span class="label-text">Url</span>
+
+                    <input id="url" 
+                    type="text" 
+                    class="input " 
+                    placeholder="https://ogimg.infoglobo.com.br/in/16871453-0f8-399/FT1086A/verao-perfume.jpg"
+                    [(ngModel)]="produto.url" 
+                    name="email" required>
+
+                </label>
+
+
+             
+
+
+                <div class="flex ">
+
+                    <a id="btnCadastrar" class="btn" (click)="salvar()"> Cadastrar </a>
+
+
+                    <a routerLink="/home" class="btn ">
+                        Cancelar
+                    </a>
+
+
+
+                </div>
+
+                <p id="mensagem"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+</body>

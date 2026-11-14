@@ -12,24 +12,44 @@ import { CadastroProdutosService } from '../services/cadastro-produtos.service';
   styleUrl: './cadastro-produtos.component.css'
 })
 export class CadastroProdutosComponent {
+ private produtos = inject(CadastroProdutosService);
 
-  private produtos = inject(CadastroProdutosService);
-  private router = inject(Router);
+  produto: Produtos = {
+    id: '',
+    nome: '',
+    descricao: '',
+    preco: '',
+    quantidade: '',
+    url: ''
+  };
 
-  salvar(){
+  salvar() {
 
-    this.produtos.incluir(this.produtos).subscribe({
-      next: (produtos) => {
-        console.log('Cadastrado com sucesso:', produtos);
-  
+    this.produtos.incluir(this.produto).subscribe({
+
+      next: (produto) => {
+        console.log('Cadastrado com sucesso:', produto);
+
+        alert('Produto cadastrado com sucesso!');
+
+        this.produto = {
+          id: '',
+          nome: '',
+          descricao: '',
+          preco: '',
+          quantidade: '',
+          url: ''
+
+        };
       },
+
       error: (erro) => {
         console.error('Erro ao cadastrar:', erro);
+        alert('Erro ao cadastrar produto!');
       }
 
     });
 
   }
 
-  }
-
+}

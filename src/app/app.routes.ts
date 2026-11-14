@@ -11,6 +11,7 @@ import { TodosprodutosComponent } from './todosprodutos/todosprodutos.component'
 import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
 import { AdminclienteComponent } from './admincliente/admincliente.component';
 import { AdminComponent } from './admin/admin.component';
+import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
 
 
 export const routes: Routes = [
@@ -81,6 +82,11 @@ export const routes: Routes = [
   {
     path: 'admincliente',
     component: AdminclienteComponent
+  },
+
+  {
+    path: 'cadastro-produtos',
+    component: CadastroProdutosComponent
   }
 
 
