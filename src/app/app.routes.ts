@@ -12,6 +12,7 @@ import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
 import { AdminclienteComponent } from './admincliente/admincliente.component';
 import { AdminComponent } from './admin/admin.component';
 import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
+import { AdminprodutosComponent } from './adminprodutos/adminprodutos.component';
 
 
 export const routes: Routes = [
@@ -85,9 +86,18 @@ export const routes: Routes = [
   },
 
   {
+    path: 'adminprodutos',
+    component: AdminprodutosComponent
+  },
+
+  {
     path: 'cadastro-produtos',
     component: CadastroProdutosComponent
-  }
+  },
+
+  { path: 'cadastro-produtos/:id',
+     component: CadastroProdutosComponent
+ }
 
 
 ];

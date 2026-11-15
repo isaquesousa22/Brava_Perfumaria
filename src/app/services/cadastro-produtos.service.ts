@@ -23,6 +23,14 @@ export class CadastroProdutosService {
     incluir(cliente:Produtos): Observable<Produtos>{
       return this.produtosHTTP.post<Produtos>(this.API, cliente)
     }
+
+      buscarPorId(id: string): Observable<Produtos> {
+       return this.produtosHTTP.get<Produtos>(`${this.API}/${id}`);
+    }
+
+    atualizar(produto: Produtos): Observable<Produtos> {
+    return this.produtosHTTP.put<Produtos>(`${this.API}/${produto.id}`, produto);
+   }
   
     excluir(id: string): Observable<void> {
     return this.produtosHTTP.delete<void>(`${this.API}/${id}`);
