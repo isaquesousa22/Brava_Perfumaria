@@ -20,14 +20,14 @@ export class CarrinhoService {
     produto: Omit<ProdutoCarrinho, 'quantidade'>
   ): void {
 
-    // Procura se o produto já está no carrinho.
+    
     const existente = this.produtos.find(
       item => String(item.id) === String(produto.id)
     );
 
     if (existente) {
       existente.quantidade++;
-    } else {
+    } else { 
       this.produtos.push({
         ...produto,
         quantidade: 1
@@ -37,7 +37,7 @@ export class CarrinhoService {
 
   aumentarQuantidade(id: string | number): void {
 
-    // Procura o produto pelo ID.
+   
     const produto = this.produtos.find(
       item => String(item.id) === String(id)
     );
@@ -49,7 +49,7 @@ export class CarrinhoService {
 
   diminuirQuantidade(id: string | number): void {
 
-    // Procura o produto pelo ID.
+  
     const produto = this.produtos.find(
       item => String(item.id) === String(id)
     );
@@ -65,7 +65,7 @@ export class CarrinhoService {
 
   removerProduto(id: string | number): void {
 
-    // Mantém no carrinho somente os produtos com outros IDs.
+   
     this.produtos = this.produtos.filter(
       produto => String(produto.id) !== String(id)
     );
