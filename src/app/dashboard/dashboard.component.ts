@@ -57,9 +57,15 @@ export class DashboardComponent {
 
   // Envia os dados do produto para o carrinho.
   this.carrinho.adicionarProduto({
-    id: Number(produto.id),
+    id: produto.id, // Mantém o ID original, sem converter para número.
     nome: produto.nome,
-    preco: Number(produto.preco.replace(',', '.')),
+    preco: Number(
+      produto.preco
+        .replace('R$', '')
+        .replace(/\./g, '')
+        .replace(',', '.')
+        .trim()
+    ),
     imagem: produto.url
   });
 

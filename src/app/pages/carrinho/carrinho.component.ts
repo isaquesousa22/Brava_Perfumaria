@@ -14,15 +14,16 @@ export class CarrinhoComponent {
 
   constructor(public carrinho: CarrinhoService) {}
 
-  aumentar(id: number): void {
+  aumentar(id: string | number): void {
+  
     this.carrinho.aumentarQuantidade(id);
   }
 
-  diminuir(id: number): void {
+  diminuir(id: string | number): void {
     this.carrinho.diminuirQuantidade(id);
   }
 
-  remover(id: number): void {
+  remover(id: string | number): void {
     this.carrinho.removerProduto(id);
   }
 

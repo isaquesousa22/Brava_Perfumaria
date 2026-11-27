@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 
 export interface ProdutoCarrinho {
-  id: number;
+  id: string | number; // Aceita IDs que sejam texto ou número.
   nome: string;
   preco: number;
   imagem?: string;
@@ -19,8 +19,10 @@ export class CarrinhoService {
   adicionarProduto(
     produto: Omit<ProdutoCarrinho, 'quantidade'>
   ): void {
+
+    // Procura se o produto já está no carrinho.
     const existente = this.produtos.find(
-      item => item.id === produto.id
+      item => String(item.id) === String(produto.id)
     );
 
     if (existente) {
@@ -33,9 +35,11 @@ export class CarrinhoService {
     }
   }
 
-  aumentarQuantidade(id: number): void {
+  aumentarQuantidade(id: string | number): void {
+
+    // Procura o produto pelo ID.
     const produto = this.produtos.find(
-      item => item.id === id
+      item => String(item.id) === String(id)
     );
 
     if (produto) {
@@ -43,9 +47,11 @@ export class CarrinhoService {
     }
   }
 
-  diminuirQuantidade(id: number): void {
+  diminuirQuantidade(id: string | number): void {
+
+    // Procura o produto pelo ID.
     const produto = this.produtos.find(
-      item => item.id === id
+      item => String(item.id) === String(id)
     );
 
     if (!produto) return;
@@ -57,9 +63,11 @@ export class CarrinhoService {
     }
   }
 
-  removerProduto(id: number): void {
+  removerProduto(id: string | number): void {
+
+    // Mantém no carrinho somente os produtos com outros IDs.
     this.produtos = this.produtos.filter(
-      produto => produto.id !== id
+      produto => String(produto.id) !== String(id)
     );
   }
 
