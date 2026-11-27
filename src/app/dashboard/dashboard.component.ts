@@ -15,7 +15,7 @@ import { Produtos } from '../model/produtos';
 })
 export class DashboardComponent {
   listaProdutos:Produtos[] = [];
-  //novoProduto:Produtos;
+ 
 
   private produtos = inject(CadastroProdutosService);
   
@@ -44,20 +44,20 @@ export class DashboardComponent {
 
  adicionarAoCarrinho(id: string): void {
 
-  // Procura o produto selecionado na lista.
+  
   const produto = this.listaProdutos.find(
     item => item.id === id
   );
 
-  // Verifica se o produto foi encontrado.
+
   if (!produto) {
     alert('Produto não encontrado!');
     return;
   }
 
-  // Envia os dados do produto para o carrinho.
+  
   this.carrinho.adicionarProduto({
-    id: produto.id, // Mantém o ID original, sem converter para número.
+    id: produto.id, 
     nome: produto.nome,
     preco: Number(
       produto.preco
@@ -69,7 +69,7 @@ export class DashboardComponent {
     imagem: produto.url
   });
 
-  // Exibe a confirmação da adição.
+  
   alert('Produto adicionado ao carrinho!');
 }
 }

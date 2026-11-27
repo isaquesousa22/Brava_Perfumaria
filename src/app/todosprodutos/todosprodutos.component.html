@@ -13,7 +13,7 @@
     <p class="descricao"><strong>Descrição:</strong> </p>
     <p>R$ 150,00</p>
     <button routerLink="/compra" class="btn">Comprar</button>
-    <button class="btn" (click)="adicionarAoCarrinho()" >carrinho</button>
+    <button class="btn" >carrinho</button>
     
 
   </div>
@@ -87,9 +87,9 @@
     <input type="hidden" [value]="produto.id" />
 
     <button class="btn">Comprar</button>
-    <!--
-    /*  <button class="btn" (click)="adicionarAoCarrinho(produto.id)">carrinho</button>*/
--->
+    
+    <button class="btn" (click)="adicionarAoCarrinho(produto.id)">carrinho</button>
+
   </div>
 
 

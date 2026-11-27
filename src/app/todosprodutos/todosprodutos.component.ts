@@ -42,14 +42,32 @@ export class TodosprodutosComponent {
       
     }
 
-  adicionarAoCarrinho(): void {
-    this.carrinho.adicionarProduto({
-      id: 1,
-      nome: 'Pacco rabane million',
-      preco: 150,
-      imagem: 'assets/perfume.png'
-    });
+    
+ adicionarAoCarrinho(id: string): void {
 
+  
+  const produto = this.listaProdutos.find(
+    item => item.id === id
+  );
+
+ 
+  if (!produto) {
+    alert('Produto não encontrado!');
+    return;
+  }
+
+  this.carrinho.adicionarProduto({
+    id: produto.id, 
+    nome: produto.nome,
+    preco: Number(
+      produto.preco
+        .replace('R$', '')
+        .replace(/\./g, '')
+        .replace(',', '.')
+        .trim()
+    ),
+    imagem: produto.url
+  });
     alert('Produto adicionado ao carrinho!');
   }
 
