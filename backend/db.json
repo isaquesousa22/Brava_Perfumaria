@@ -8,6 +8,15 @@
       "cpfCnpj": "356465655",
       "senha": "123",
       "id": "1"
+    },
+    {
+      "nome": "a",
+      "telefone": "77",
+      "endereco": "Av. Dr. Chucri Zaidan, 296",
+      "email": "a@a",
+      "cpfCnpj": "a",
+      "senha": "a",
+      "id": "ispKED2"
     }
   ],
   "admin": [

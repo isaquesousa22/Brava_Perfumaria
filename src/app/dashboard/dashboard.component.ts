@@ -42,17 +42,28 @@ export class DashboardComponent {
 
  }
 
- adicionarAoCarrinho(id:string): void {
-  
-  //Produtos novoProduto = new Produtos();
-  this.listaProdutos[0].id = id;
+ adicionarAoCarrinho(id: string): void {
 
-  //meuProduto: Produtos = null;
+  // Procura o produto selecionado na lista.
+  const produto = this.listaProdutos.find(
+    item => item.id === id
+  );
 
-  
-  
-  //this.carrinho.adicionarProduto(this.listaProdutos);
-
-    alert('Produto adicionado ao carrinho!');
+  // Verifica se o produto foi encontrado.
+  if (!produto) {
+    alert('Produto não encontrado!');
+    return;
   }
+
+  // Envia os dados do produto para o carrinho.
+  this.carrinho.adicionarProduto({
+    id: Number(produto.id),
+    nome: produto.nome,
+    preco: Number(produto.preco.replace(',', '.')),
+    imagem: produto.url
+  });
+
+  // Exibe a confirmação da adição.
+  alert('Produto adicionado ao carrinho!');
+}
 }
