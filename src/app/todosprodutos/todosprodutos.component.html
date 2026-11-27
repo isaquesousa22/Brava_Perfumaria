@@ -76,44 +76,31 @@
 
   </div>
 
-  <div class="produto">
+  @for (produto of listaProdutos; track produto.id) {
+    <div class="produto">
     <div class="img">
-      <img src="#" alt="Produto 1">
+      <img  alt="Produto 1" src="{{produto.url}}" >
     </div>
-    <h3 class="titleProduto">Perfume</h3>
-    <p class="descricao"><strong>Descrição:</strong> </p>
-    <p>R$ 99,99</p>
+    <h3 class="titleProduto" >{{produto.nome}}</h3>
+    <p class="descricao"  ><strong>Descrição: {{produto.descricao}}</strong>  </p>
+    <p>{{produto.preco}}</p>
+    <input type="hidden" [value]="produto.id" />
 
     <button class="btn">Comprar</button>
-    <button class="btn">carrinho</button>
-
+    <!--
+    /*  <button class="btn" (click)="adicionarAoCarrinho(produto.id)">carrinho</button>*/
+-->
   </div>
 
-  <div class="produto">
-    <div class="img">
-      <img src="#" alt="Produto 1">
-    </div>
-    <h3 class="titleProduto">Perfume</h3>
-    <p class="descricao"><strong>Descrição:</strong> </p>
-    <p>R$ 99,99</p>
 
-    <button class="btn">Comprar</button>
-    <button class="btn">carrinho</button>
 
-  </div>
 
-  <div class="produto">
-    <div class="img">
-      <img src="#" alt="Produto 1">
-    </div>
-    <h3 class="titleProduto">Perfume</h3>
-    <p class="descricao"><strong>Descrição:</strong> </p>
-    <p>R$ 99,99</p>
+  }
 
-    <button class="btn">Comprar</button>
-    <button class="btn">carrinho</button>
+  
+</section>
 
-  </div>
+<section class="produtos">
 
 </section>
 

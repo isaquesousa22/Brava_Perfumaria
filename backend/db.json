@@ -36,6 +36,14 @@
       "preco": "170,00",
       "quantidade": "1",
       "url": "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/forman/media/uploads/produtos/foto/iibnzwzi/17150250-332f-4970-9313-f59d7327c4a3.jpeg"
+    },
+    {
+      "nome": "Natura Una",
+      "descricao": "",
+      "preco": "R$192,00",
+      "quantidade": "3",
+      "url": "https://production.na01.natura.com/dw/image/v2/BFKR_PRD/on/demandware.static/-/Sites-natura-br-storefront-catalog/default/dw4a0dd86a/Produtos/PRODUTO/NATBRA-128756_2.jpg",
+      "id": "Wav65-M"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
